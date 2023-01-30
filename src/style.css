@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+*{
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: hsl(185, 41%, 84%);
+}
+
+.title{
+    text-align: center;
+}
+
+.card{
+    width: 65%;
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.left-card{
+    margin: 20px;
+    width: 33%;
+    background-color: hsl(0, 0%, 100%);
+    padding: 10px;
+}
+
+.right-card{
+    margin: 20px;
+    width: 33%;
+    background-color: hsl(183, 100%, 15%);
+    padding: 10px;
+    border-radius: 10px;
+}
