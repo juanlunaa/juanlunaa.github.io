@@ -20,7 +20,6 @@ body{
     background-color: hsl(0, 0%, 100%);
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: center;
     gap: 10px;
     margin: 0 auto;
@@ -29,17 +28,22 @@ body{
 
 .left-card{
     margin: 20px;
-    width: 33%;
+    width: calc(100%/2);
     background-color: hsl(0, 0%, 100%);
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
 .right-card{
     margin: 20px;
-    width: 33%;
+    width: calc(100%/2);
     background-color: hsl(183, 100%, 15%);
     padding: 10px;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 .discount-input{
@@ -48,8 +52,9 @@ body{
 
 .discount-label{
     background-color: hsl(183, 100%, 15%);
+    color: hsl(0, 0%, 100%);
     text-align: center;
-    width: 33%;
+    width: calc(100%/3);
     padding: 5px 5px;
     border-radius: 5px;
 }
@@ -60,11 +65,13 @@ body{
 
 .discount-input:checked + label{
     background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
 }
 
 .card-inputs{
     display: flex;
     flex-direction: column;
+    width: 100%;
     gap: 10px;
 }
 
@@ -77,21 +84,61 @@ body{
 .discount-custom{
     background-color: hsl(189, 41%, 97%);
     text-align: center;
-    width: 33%;
+    width: calc(100%/3);
     padding: 5px 5px;
     border-radius: 5px;
 }
 
-.number-people{
+.number-people, .bill{
+    background-color: hsl(189, 41%, 97%);
+    color: hsl(183, 100%, 15%);
     width: 100%;
     text-align: right;
-    padding: 5px;
     font-size: 24px;
     border-radius: 5px;
+    border: 0;
+}
+
+.number-people:focus, .bill:focus{
+    outline-color: hsl(172, 67%, 45%);
+
+}
+
+.number-people::placeholder, .bill::placeholder, .left-card-text{
+    color: hsl(184, 14%, 56%);
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button{
     -webkit-appearance:none;
-    margin: 3px;
+    margin: 3px;
+}
+
+.tip-amount, .total{
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+span{
+    font-size: 40px;
+    color: hsl(172, 67%, 45%);
+}
+
+.right-card-title{
+    color: hsl(189, 41%, 97%);
+}
+
+.right-card-subtitle{
+    color: hsl(184, 14%, 56%);
+}
+
+#reset-calculator{
+    margin: 20px;
+    height: 40px;
+    font-size: 24px;
+    color: hsl(183, 100%, 15%);
 }
