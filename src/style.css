@@ -21,18 +21,17 @@ body{
 .card{
     width: 65%;
     background-color: hsl(0, 0%, 100%);
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: calc(100%/2) calc(100%/2);
+    grid-column-gap: 10px;
     justify-content: center;
-    gap: 10px;
     margin: 0 auto;
     border-radius: 10px;
 }
 
 .left-card{
-    margin: 20px;
-    width: calc(100%/2);
     background-color: hsl(0, 0%, 100%);
+    margin: 20px;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -40,13 +39,13 @@ body{
 }
 
 .right-card{
-    margin: 20px;
-    width: calc(100%/2);
     background-color: hsl(183, 100%, 15%);
+    margin: 20px;
     padding: 10px;
     border-radius: 10px;
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
+    justify-content: space-between;
 }
 
 .discount-input{
@@ -57,7 +56,6 @@ body{
     background-color: hsl(183, 100%, 15%);
     color: hsl(0, 0%, 100%);
     text-align: center;
-    width: calc(100%/3);
     padding: 5px 5px;
     border-radius: 5px;
 }
@@ -71,28 +69,16 @@ body{
     color: hsl(183, 100%, 15%);
 }
 
-.discount-input:hover + label{
-    background-color: hsl(185, 41%, 84%);
-    color: hsl(183, 100%, 15%);
-}
-
 .card-inputs{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 10px;
-}
-
-.card-inputs-row{
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: calc(100%/3) calc(100%/3) calc(100%/3);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
 }
 
 .discount-custom{
     background-color: hsl(189, 41%, 97%);
     text-align: center;
-    width: calc(100%/3);
     padding: 5px 5px;
     border-radius: 5px;
 }
@@ -112,7 +98,7 @@ body{
 
 }
 
-.number-people::placeholder, .bill::placeholder, .left-card-text{
+.number-people::placeholder, .bill::placeholder, .left-card-text, .discount-custom{
     color: hsl(184, 14%, 56%);
 }
 
@@ -161,4 +147,28 @@ span{
 
 #reset-calculator:active{
     background-color: hsl(184, 14%, 56%);
+}
+
+@media (max-width: 375px){
+    .card{
+        width: 100%;
+        background-color: hsl(0, 0%, 100%);
+        display: grid;
+        grid-template-columns: auto;
+        grid-column-gap: 10px;
+        justify-content: center;
+        margin: 0 auto;
+        border-radius: 10px;
+    }
+
+    .card-inputs{
+        display: grid;
+        grid-template-columns: calc(100%/2) calc(100%/2);
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+    }
+
+    span{
+        font-size: 32px;
+    }
 }
