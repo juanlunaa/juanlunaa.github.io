@@ -41,3 +41,7 @@ body{
     padding: 10px;
     border-radius: 10px;
 }
+
+#five, #ten, #fifteen, #twenty-five, #fifty{
+    display: none;
+}
