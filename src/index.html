@@ -20,30 +20,34 @@
             <input type="number" placeholder="0">
     
             <p>Select tip %</p>
-            <input id="five" type="radio" name="discount">
-            <label for="five">5%</label>
-    
-            <input id="ten" type="radio" name="discount">
-            <label for="ten">10%</label>
-    
-            <input id="fifteen" type="radio" name="discount">
-            <label for="fifteen">15%</label>
-    
-            <input id="twenty-five" type="radio" name="discount">
-            <label for="twenty-five">25%</label>
-    
-            <input id="fifty" type="radio" name="discount">
-            <label for="fifty">50%</label>
+            <div class="card-inputs">
+                <div class="card-inputs-row">
+                    <input class="discount-input" id="five" type="radio" name="discount">
+                    <label class="discount-label" for="five">5%</label>
             
-            <input type="number" placeholder="Custom">
+                    <input class="discount-input" id="ten" type="radio" name="discount">
+                    <label class="discount-label" for="ten">10%</label>
+            
+                    <input class="discount-input" id="fifteen" type="radio" name="discount">
+                    <label class="discount-label" for="fifteen">15%</label>
+                </div>
 
-            <input id="custom" type="radio" name="discount">
-            <label for="custom">Custom</label>
+                <div class="card-inputs-row">
+                    <input class="discount-input" id="twenty-five" type="radio" name="discount">
+                    <label class="discount-label" for="twenty-five">25%</label>
+            
+                    <input class="discount-input" id="fifty" type="radio" name="discount">
+                    <label class="discount-label" for="fifty">50%</label>
+                            
+                    <input class="discount-input" id="custom" type="radio" name="discount">
+                    <label class="discount-custom" for="custom">Custom</label>
+                </div>
+            </div>
+            
     
             <p>Number of People</p>
-            <input type="number" placeholder="0">
-    
-    
+            <input class="number-people" type="number" placeholder="0">
+
         </div>
         <div class="right-card">
 

@@ -42,6 +42,56 @@ body{
     border-radius: 10px;
 }
 
-#five, #ten, #fifteen, #twenty-five, #fifty{
+.discount-input{
     display: none;
+}
+
+.discount-label{
+    background-color: hsl(183, 100%, 15%);
+    text-align: center;
+    width: 33%;
+    padding: 5px 5px;
+    border-radius: 5px;
+}
+
+.discount-label:hover{
+    cursor: pointer;
+}
+
+.discount-input:checked + label{
+    background-color: hsl(172, 67%, 45%);
+}
+
+.card-inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-inputs-row{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.discount-custom{
+    background-color: hsl(189, 41%, 97%);
+    text-align: center;
+    width: 33%;
+    padding: 5px 5px;
+    border-radius: 5px;
+}
+
+.number-people{
+    width: 100%;
+    text-align: right;
+    padding: 5px;
+    font-size: 24px;
+    border-radius: 5px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance:none;
+    margin: 3px;
 }
