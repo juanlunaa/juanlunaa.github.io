@@ -23,7 +23,10 @@
             
             <div class="section-select-tip">
                 <p class="left-card-text">Select tip %</p>
+                <form id="inputs">
                 <div class="card-inputs">
+                    
+                        
                     
                     <input class="discount-input" id="five" type="radio" name="discount">
                     <label class="discount-label" for="five">5%</label>
@@ -40,10 +43,10 @@
                     <input class="discount-input" id="fifty" type="radio" name="discount">
                     <label class="discount-label" for="fifty">50%</label>
                             
-                    <input class="discount-input" id="custom" type="radio" name="discount">
-                    <label class="discount-custom" for="custom">Custom</label>
+                    <input class="discount-custom" id="custom" type="number" name="discount" placeholder="Custom">
 
                 </div>
+            </form>
             </div>
             
             <div class="section-number-people">
@@ -79,6 +82,6 @@
             <button id="reset-calculator">RESET</button>
         </div>
     </div>
-    
+    <script src="./src/code.js"></script>
 </body>
 </html>

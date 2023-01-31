@@ -81,6 +81,7 @@ body{
     text-align: center;
     padding: 5px 5px;
     border-radius: 5px;
+    border: 0;
 }
 
 .number-people, .bill{
@@ -93,7 +94,7 @@ body{
     border: 0;
 }
 
-.number-people:focus, .bill:focus{
+.number-people:focus, .bill:focus, .discount-custom:focus{
     outline-color: hsl(172, 67%, 45%);
 
 }
