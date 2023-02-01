@@ -150,7 +150,7 @@ span{
     background-color: hsl(184, 14%, 56%);
 }
 
-@media (max-width: 375px){
+@media (max-width: 425px){
     .card{
         width: 100%;
         background-color: hsl(0, 0%, 100%);
