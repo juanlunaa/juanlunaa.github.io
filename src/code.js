@@ -5,18 +5,24 @@ let numberPeople
 
 function starCalculator(){
     getBill()
-    discountManager()
     getNumberPeople()
+    discountManager()
 }
 
 function getBill(){
     let inputBill = document.getElementById("bill")
-    inputBill.addEventListener("keypress", function(){bill = inputBill.value})
+    inputBill.addEventListener("keyup", function(){
+        bill = parseInt(inputBill.value)
+        calculator()
+    })
 }
 
 function getNumberPeople(){
     let inputNumberPeople = document.getElementById("number-people")
-    inputNumberPeople.addEventListener("keypress", function(){numberPeople = inputNumberPeople.value})
+    inputNumberPeople.addEventListener("keyup", function(){
+        numberPeople = parseInt(inputNumberPeople.value)
+        calculator()
+    })
 }
 
 function discountManager(){
@@ -31,14 +37,46 @@ function discountManager(){
         document.getElementById("inputs").reset()
     })
 
-    custom.addEventListener("keypress", function(){
-        discount = custom.value
+    custom.addEventListener("keyup", function(){
+        discount = parseInt(custom.value)
+        calculator()
         console.log(discount)
     })
 
-    five.addEventListener("click", function(){discount = 5})
-    ten.addEventListener("click", function(){discount = 10})
-    fifteen.addEventListener("click", function(){discount = 15})
-    twentyFive.addEventListener("click", function(){discount = 25})
-    fifty.addEventListener("click", function(){discount = 50})
+    five.addEventListener("click", function(){
+        discount = 5
+        calculator()
+    })
+
+    ten.addEventListener("click", function(){
+        discount = 10
+        calculator()
+    })
+
+    fifteen.addEventListener("click", function(){
+        discount = 15
+        calculator()
+    })
+
+    twentyFive.addEventListener("click", function(){
+        discount = 25
+        calculator()
+    })
+
+    fifty.addEventListener("click", function(){
+        discount = 50
+        calculator()
+    })
+}
+
+function calculator(){    
+    if(bill!=undefined && discount!=undefined && numberPeople!=undefined){
+        let tipAmount = (bill*discount)/100
+    
+        let tipAmountPerson = (tipAmount/numberPeople)
+        let totalPerson = ((bill/numberPeople) + tipAmountPerson)
+
+        document.getElementById("tip-amount-span").innerHTML = "$"+tipAmountPerson.toFixed(2)
+        document.getElementById("total-span").innerHTML = "$"+totalPerson.toFixed(2)
+    } 
 }
